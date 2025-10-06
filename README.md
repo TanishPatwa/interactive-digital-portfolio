@@ -33,5 +33,5 @@ Tanish Patwa — Electronics Engineer passionate about technology, web developme
 Focused on building user-friendly and visually appealing digital experiences.
 
 🗂️ Repository Link
-
+https://tanishpatwa.github.io/interactive-digital-portfolio/
 
