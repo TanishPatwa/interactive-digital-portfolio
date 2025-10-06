@@ -32,6 +32,6 @@ Pastel-vibrant theme with modern UI aesthetics
 Tanish Patwa — Electronics Engineer passionate about technology, web development, and creative design.
 Focused on building user-friendly and visually appealing digital experiences.
 
-🗂️ Repository Link
+🗂️ ProjectLink
 https://tanishpatwa.github.io/interactive-digital-portfolio/
 
