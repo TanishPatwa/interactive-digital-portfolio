@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanish Patwa | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Montserrat', sans-serif; }
+    body {
+      line-height:1.6;
+      scroll-behavior:smooth;
+      background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+      color:#333;
+    }
+
+    /* Navigation */
+    header {
+      background: linear-gradient(135deg, #A8E6CF, #FFD3B6);
+      padding:15px 0;
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+    nav ul { display:flex; justify-content:center; list-style:none; }
+    nav ul li { margin:0 25px; }
+    nav ul li a { text-decoration:none; font-weight:600; font-size:18px; color:#333; transition:0.3s; }
+    nav ul li a:hover { color:#ff6b81; }
+
+    section { padding:120px 20px; min-height:100vh; opacity:0; transform:translateY(50px); transition: all 0.8s ease-out; }
+    h1 { text-align:center; margin-bottom:40px; font-size:36px; color:#333; }
+
+    /* About Me */
+    #about { background:#fff; border-radius:20px; max-width:900px; margin:auto; padding:60px 30px; box-shadow:0 12px 25px rgba(0,0,0,0.1); transition:0.3s; }
+    #about:hover { transform: translateY(-5px); }
+    #about .profile-placeholder { width:160px; height:160px; border-radius:50%; background:#ccc; margin:0 auto 30px; }
+    #about p { font-size:18px; margin-bottom:20px; text-align:center; color:#555; line-height:1.6; }
+
+    /* Skills */
+    .skill { margin:25px 0; max-width:600px; margin-left:auto; margin-right:auto; }
+    .skill p { margin-bottom:8px; font-weight:600; color:#333; }
+    .skill-bar { background:#e0e0e0; border-radius:25px; overflow:hidden; position:relative; }
+    .skill-level { height:22px; width:0; border-radius:25px; background: linear-gradient(90deg,#A8E6CF,#FFD3B6); transition: width 2s ease; position:relative; }
+    .skill-percent { position:absolute; right:10px; top:50%; transform:translateY(-50%); color:#333; font-weight:600; font-size:14px; }
+
+    /* Projects */
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; max-width:1000px; margin:auto; }
+    .card { position:relative; border-radius:20px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.1); cursor:pointer; transition:transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform:scale(1.05); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
+    .card img { width:100%; display:block; }
+    .overlay { position:absolute; bottom:0; background:rgba(0,0,0,0.75); color:#fff; width:100%; padding:25px; transform:translateY(100%); transition: transform 0.4s ease; }
+    .card:hover .overlay { transform:translateY(0); }
+    .overlay h2 { margin-bottom:10px; font-size:22px; }
+    .overlay p { font-size:16px; line-height:1.4; }
+
+    /* Contact */
+    form { max-width:500px; margin:auto; display:flex; flex-direction:column; background:#fff; padding:40px; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:0.3s; }
+    form:hover { transform: translateY(-5px); }
+    form input, form textarea { margin:12px 0; padding:15px; font-size:16px; border-radius:10px; border:1px solid #ccc; }
+    form button { padding:15px; font-size:18px; font-weight:600; border:none; border-radius:10px; background:linear-gradient(135deg,#A8E6CF,#FFD3B6); color:#333; cursor:pointer; transition:0.3s; margin-top:15px; }
+    form button:hover { background:linear-gradient(135deg,#FFD3B6,#A8E6CF); }
+
+    footer { text-align:center; padding:25px; background:#333; color:#fff; font-weight:500; }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h1>About Me</h1>
+  <div class="profile-placeholder"></div>
+  <p>Hi! I’m <b>Tanish Patwa</b>, a passionate and curious developer who loves building interactive and visually engaging digital experiences.</p>
+  <p>I specialize in front-end development with <b>HTML, CSS, and JavaScript</b>, and I enjoy exploring <b>Java, Python, and databases</b> to create efficient and scalable solutions.</p>
+  <p>Outside of coding, I love exploring new technologies and solving logical challenges.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h1>Skills</h1>
+  <div class="skill">
+    <p>HTML</p>
+    <div class="skill-bar"><div class="skill-level" data-width="90%"><span class="skill-percent">90%</span></div></div>
+  </div>
+  <div class="skill">
+    <p>CSS</p>
+    <div class="skill-bar"><div class="skill-level" data-width="85%"><span class="skill-percent">85%</span></div></div>
+  </div>
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="skill-bar"><div class="skill-level" data-width="75%"><span class="skill-percent">75%</span></div></div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h1>Projects</h1>
+  <div class="gallery">
+    <div class="card">
+      <img src="project1.jpg" alt="Project 1">
+      <div class="overlay">
+        <h2>Weather App</h2>
+        <p>Shows live weather using API.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="project2.jpg" alt="Project 2">
+      <div class="overlay">
+        <h2>To-Do List</h2>
+        <p>Task manager app with HTML, CSS & JS.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="project3.jpg" alt="Project 3">
+      <div class="overlay">
+        <h2>Portfolio</h2>
+        <p>Interactive portfolio showcasing my work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h1>Contact Me</h1>
+  <form id="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>&copy; 2025 Tanish Patwa</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Animate sections & skill bars
+  function animateSections() {
+    document.querySelectorAll('section').forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100){
+        sec.style.opacity = 1;
+        sec.style.transform = "translateY(0)";
+      }
+    });
+    document.querySelectorAll('.skill-level').forEach(level=>{
+      const rect = level.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 50){
+        level.style.width = level.getAttribute('data-width');
+      }
+    });
+  }
+  window.addEventListener('load', animateSections);
+  window.addEventListener('scroll', animateSections);
+
+  // Contact form alert
+  document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message sent! (For real emails, connect with a backend.)");
+  });
+</script>
+
+</body>
+</html>
